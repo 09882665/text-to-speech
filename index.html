@@ -3,136 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spannerz Sure Bets</title>
+    <title>Free & Premium Soccer Betting Tips | Spannerz Sure Bets</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 10px;
-            background-color: #28a745; /* Green color */
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #fff; /* White color */
-        }
-        .game {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .game span {
-            font-size: 18px;
-            flex: 1;
-        }
-        .game span.teams {
-            font-weight: bold;
-            background-color: #28a745; /* Green color */
-            color: #fff; /* White color */
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .game span.score {
-            font-size: 20px;
-            color:red; /* Green color */
-        }
-        .game:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .game:last-child {
-            margin-bottom: 0;
-        }
-        .dropdown {
-            position: absolute;
-            left: 20px;
-            top: 20px;
-            z-index: 9999;
-        }
-        .dropdown-icon {
-            font-size: 24px;
+
+        header {
+            background-color: #333;
             color: #fff;
-            cursor: pointer;
+            padding: 20px 0;
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
-            z-index: 1;
-        }
-        .dropdown:hover .dropdown-content {
+
+        header img {
             display: block;
+            margin: 0 auto;
         }
-        .dropdown-content a {
-            color: black;
-            padding: 6px 0;
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
-            display: block;
+            font-size: 18px;
         }
-        .dropdown-content a:hover {
-            background-color: #ddd;
+
+        .hero {
+            background-image: url('soccer-bg.jpg');
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
         }
-        #color1{background-color: red;}
-        #color2{background-color:#28a745;}
-        h2{ background-color: hsl(110, 93%, 49%); width:450px; align-self: center; display:flex; border-radius: 10px; font-variant-position: inherit;}
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #FF4500;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .about,
+        .team,
+        .daily-tips,
+        .blog {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about h2,
+        .team h2,
+        .daily-tips h2,
+        .blog h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #FF4500;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="dropdown">
-            <span class="dropdown-icon">&#9776;</span>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <h1>Spannerz Sure Bets</h1>
-        <br>
-    
-       <h2 background-color="black";>ENGLAND PREMIER LEAGUE</h2>
-       <br><h3 background-color="blue";color="white">TODAY'S PREDICTION</h3>
-       <p>free 100% sure tips  </p>
-        <div class="game">
-            <span class="teams">Chelsea vs Man U </span>
-            <table>
-            
-            <br>
-            <table border="" margin="15px">
-                <td id="color1">60%</td> <span class="score">2-2</span><td id="color2">40%</td>
-                </table>
-        </div>
-        <div class="game">
-            <span class="teams">Arsenal vs Liverpool</span>
-<br>
-            <table border="" margin="15px">
-                <td id="color1">83%</td> <span class="score">3-1</span><td id="color2">17%</td>
-                </table>
-        </div>
-        <div class="game">
-            <span class="teams">MAN  vs LUTON</span>
-            <table border="" margin="15px">
-                <td id="color1">67%</td> <span class="score">5-1</span><td id="color2">33%</td>
-                </table>
 
-        </div>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Spannerz Sure Bets Logo">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Daily Tips</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Get Your Soccer Betting Tips</h1>
+      <p>Expert Insights for Smarter Betting</p>
+      <a href="#" class="cta-btn">Get Started for Free</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about">
+    <div class="container">
+      <h2>About Spannerz Sure Bets</h2>
+      <p>Introduce the site and its mission of providing both free and premium daily soccer betting tips.</p>
+    </div>
+  </section>
+
+  <!-- Team Members Section -->
+  <section class="team">
+    <div class="container">
+      <h2>Meet Our Expert Analysts</h2>
+      <!-- Grid layout showcasing team members -->
+    </div>
+  </section>
+
+  <!-- Daily Tips Section -->
+  <section class="daily-tips">
+    <div class="container">
+      <h2><a href="#">Today's Top Picks (Including Free & Premium)</a></h2>
+      <!-- Grid layout featuring today's recommended bets -->
+      <a href="#" class="cta-btn">View More Tips</a>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog">
+    <div class="container">
+      <h2><a href="#">Latest Insights & Analysis</a></h2>
+      <!-- Grid layout showcasing recent blog posts -->
+      <a href="#" class="cta-btn">Explore More Articles</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Free & Premium Soccer Betting Tips | Spannerz Sure Bets</p>
+      <p>All betting tips provided are for informational purposes only. Please gamble responsibly.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
