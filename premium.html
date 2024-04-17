@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Games Premium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #FFA500; /* Orange */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .odds {
+            color: #FF5722;
+            font-weight: bold;
+        }
+        .payment-info {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .payment-info h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        .payment-info p {
+            font-size: 18px;
+            margin: 5px 0;
+            color: #333;
+        }
+        .payment-info .till-number {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            color: #006400; /* Dark green */
+        }
+        .payment-info .instructions {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .payment-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .payment-form input[type="text"] {
+            margin-bottom: 10px;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .payment-form input[type="text"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        .payment-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+        .payment-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .premium-packages {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .package {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+        }
+        .package h3 {
+            margin-top: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .orange-button {
+            background-color: #FFA500; /* Orange */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .orange-button:hover {
+            background-color: #FF8C00; /* Darker orange */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Sports Games Premium</h1>
+        <p>Unlock exclusive access to premium sports games with our subscription packages. Enjoy high-quality coverage of your favorite matches with our premium service.</p>
+        <div class="premium-packages">
+            <h2>Premium Packages</h2>
+            <div class="package">
+                <h3>1 Day Access</h3>
+                <p>Ksh 400</p>
+            </div>
+            <div class="package">
+                <h3>1 Week Access</h3>
+                <p>Ksh 1000</p>
+            </div>
+            <div class="package">
+                <h3>1 Month Access</h3>
+                <p>Ksh 3500</p>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Odds</th>
+                    <th>Prediction</th>
+                    <th>Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arsenal vs. Manchester City</td>
+                    <td class="odds">2.50</td>
+                    <td>Draw</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Liverpool vs. Chelsea</td>
+                    <td class="odds">3.00</td>
+                    <td>Win</td>
+                    <td>-</td>
+                </tr>
+                <!-- Add more rows here -->
+                <tr>
+                    <td>Real Madrid vs. Barcelona</td>
+                    <td class="odds">2.20</td>
+                    <td>Draw</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Bayern Munich vs. Borussia Dortmund</td>
+                    <td class="odds">2.80</td>
+                    <td>Win</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Manchester United vs. Tottenham Hotspur</td>
+                    <td class="odds">2.60</td>
+                    <td>Draw</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Paris Saint-Germain vs. AS Monaco</td>
+                    <td class="odds">3.20</td>
+                    <td>Win</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Juventus vs. AC Milan</td>
+                    <td class="odds">2.90</td>
+                    <td>Draw</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Ajax vs. PSV Eindhoven</td>
+                    <td class="odds">2.70</td>
+                    <td>Win</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Inter Milan vs. Napoli</td>
+                    <td class="odds">2.40</td>
+                    <td>Draw</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="payment-info">
+            <h2>Payment Details</h2>
+            <p>To Till Number:</p>
+            <p class="till-number">9945423</p>
+            <div class="instructions">
+                <p>1. Go to your M-Pesa menu</p>
+                <p>2. Select "Lipa Na M-Pesa"</p>
+                <p>3. Choose "Buy Goods and Services"</p>
+                <p>4. Enter the Till Number provided</p>
+                <p>5. Enter the amount</p>
+                <p>6. Enter your M-Pesa PIN to confirm</p>
+            </div>
+        </div>
+        <div class="payment-form">
+            <form action="https://formspree.io/f/xoqgyvnz" method="POST">
+                <input type="text" name="contact-info" placeholder="Enter the phone number that made payment" pattern="^\d{10,12}$" title="Please enter a valid phone number (between 10 and 12 digits)" required><br>
+                <input type="submit" value="Unlock Games">
+            </form>
+        </div>
+        <div class="button-container">
+            <a href="index.html" class="orange-button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
