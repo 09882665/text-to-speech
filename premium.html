@@ -185,7 +185,6 @@
                     <td>Win</td>
                     <td>-</td>
                 </tr>
-                <!-- Add more rows here -->
                 <tr>
                     <td>Real Madrid vs. Barcelona</td>
                     <td class="odds">2.20</td>
@@ -228,6 +227,12 @@
                     <td>Draw</td>
                     <td>-</td>
                 </tr>
+                <tr>
+                    <td>Manchester City vs. Liverpool</td>
+                    <td class="odds">2.30</td>
+                    <td>Win</td>
+                    <td>-</td>
+                </tr>
             </tbody>
         </table>
         <div class="payment-info">
@@ -248,10 +253,19 @@
                 <input type="text" name="contact-info" placeholder="Enter the phone number that made payment" pattern="^\d{10,12}$" title="Please enter a valid phone number (between 10 and 12 digits)" required><br>
                 <input type="submit" value="Unlock Games">
             </form>
+            <p id="notification" style="display: none; color: #4CAF50;">Your request is being processed. Please be patient. You will receive a response via the provided phone number.</p>
         </div>
         <div class="button-container">
             <a href="index.html" class="orange-button">Back to Home</a>
         </div>
     </div>
+    <script>
+        // Show notification message upon form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById('notification').style.display = 'block'; // Display notification
+            this.reset(); // Reset form fields
+        });
+    </script>
 </body>
 </html>
