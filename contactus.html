@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spannerz Sure Bets</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <style>
+        /* Add any additional styles specific to this page */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .contact-form h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .contact-form p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #FF4500;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #e04117;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Contact Form Section -->
+  <div class="container">
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Fill out the form below to get in touch with us.</p>
+      <form id="contactForm" action="contact.php" method="post" onsubmit="return validateForm()">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+        <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+        <input type="submit" value="Send Message">
+        <div id="errorMessage" class="error-message"></div>
+      </form>
+      <p>Or call us at: <a href="tel:+254743763147">0743763147</a></p>
+    </section>
+  </div>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+      var errorMessage = document.getElementById("errorMessage");
+
+      // Simple email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errorMessage.innerText = "Please enter a valid email address.";
+        return false;
+      }
+
+      // Simple phone number validation
+      var phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(phone)) {
+        errorMessage.innerText = "Please enter a valid 10-digit phone number.";
+        return false;
+      }
+
+      // Display a confirmation message
+      alert("Your message has been received. We'll get back to you as soon as possible.");
+
+      // Reset error message
+      errorMessage.innerText = "";
+
+      // Return false to prevent the form from submitting and reloading the page
+      return false;
+    }
+  </script>
+
+</body>
+</html>
