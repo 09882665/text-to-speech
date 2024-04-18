@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
         .container {
-            width: auto;
+            width: 90%;
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
@@ -47,6 +47,7 @@
             border-radius: 10px;
             background-color: #fff;
             transition: transform 0.3s ease;
+            flex: 1 1 30%; /* Adjusting flex properties for responsiveness */
         }
         .package:hover {
             transform: translateY(-5px);
@@ -148,6 +149,18 @@
         }
         .orange-button:hover {
             background-color: #f44336;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .premium-packages .package {
+                flex: 1 1 45%;
+            }
+            table {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
