@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text speech  converter</title>
+        <style>
+                
+                  
+#hero{
+        background: linear-gradient( 100Deg,red,blue,green,rgb(8, 8, 8));
+
+        
+        color:white;
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+
+        
+
+
+}
+textarea{
+        border-radius: 5px;
+        color:white;
+        width:40%;
+        background-color:color-mix(in srgb, rgb(223, 9, 9), rgb(28, 28, 139));
+      height:   350px;
+               background-position: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        border-style: ridge;
+        border-color:rgb(46, 11, 11);
+        border-width: 6px;
+        
+        text-emphasis-color: red;
+        text-decoration-color: blue;
+
+
+}
+select{
+        background-color:rgb(224, 58, 94)
+}
+strong{
+        color:red;
+}
+h1{
+        display: block;
+        font-size:xx-large;
+}
+button{
+        background-color: rgb(216, 104, 12);
+        cursor:pointer;
+        border-style: groove;
+        border-width: 4px;
+        padding: 5px;
+        margin: 5px;
+        border-color: rgb(105, 70, 70);
+        border-radius: 10px;
+}
+#inpuFile{
+        background-color: black;
+        display: none;
+}
+label{
+        color: rgb(227, 227, 238);
+        border-style: dashed;
+        border-color: rgb(4, 233, 42);
+}
+
+
+ img{
+        width:100px;
+        height:100px ;
+        border-radius: 200px;
+}
+button#Nicholas{
+        background-color: orangered;
+        border-radius: 10px;
+
+}
+.play{
+        width:15px;
+        height: 15px;
+}
+#typing{
+        display: block;
+        border:none;
+        color:rgb(245, 241, 241);
+        font-size: larger;
+
+align-items: center;
+justify-content: center;
+display: flex;
+height: 20px;
+}
+
+        </style>
+</head>
+<body>
+      
+        
+        <div id="hero">
+                
+                
+                        <div id="profle"><img src="hub.jpg"><br>Nicholas Kyalo</div>  <button id="Nicholas" onclick="goodWork()"><img  class="play"    src="play.png">About</button><br>
+                <h1>Text Speech<strong> Converter</strong><br></h1>
+                        <input type="file" id="inputFile"><br>
+                        <label for="inpuFile"><a> Upload Document</a></label><br>
+                <br>
+                
+                        <br>
+                        <div id="typing"></p></div>
+                        <textarea >Type  something/upload/paste</textarea><br><div>
+                        <button onclick="speechText()"  id="spik"><img src="play.png" class="play">Play</button> 
+                       <button onclick="clearAll();stopAudio()" id="clear">clear</button>
+                       <button onclick="stopAudio()"><img  class="play"   src="stop.png">stop</button></div>
+                       <button class="play" onclick="printContent()">print page</button>
+                </div>
+
+        </div>
+       
+         <!-- Include jsPDF library -->
+                <script>
+               //         let inpufile=$("#input");
+                
+
+               const han=document.getElementById("typing");
+                document.querySelector("textarea").addEventListener("keydown" ,()=>{
+
+                        han.innerText="typing....";
+});
+document.querySelector("textarea").addEventListener("keyup" ,()=>{
+
+han.innerText="";
+});
+
+                function printContent(){
+                window.print();
+        }
+                function stopAudio(){
+                        speech.text=document.querySelector("textarea");
+                        window.speechSynthesis.cancel(speech);}
+                
+                function clearAll(){
+                        document.querySelector("textarea").value="";
+                }
+                let congratulations=new SpeechSynthesisUtterance();
+                function goodWork(){
+                        congratulations.text="Nicholas chalo is a student from moi University Pursuing BSC in Chemical and Process Engineering. He is a web Designer as well  as a SOFTWARE developer.To access Nicholas for business matters or to share ideas call or whatsapp 0743763147,i repeat ,0743763147";
+                        window.speechSynthesis.speak(congratulations);
+                }
+                let speech= new SpeechSynthesisUtterance();
+               /* let voices=[];
+                let voiceSelect=document.querySelector("select");
+                window.speechSynthesis.onvoiceschanged=() =>{
+                        voices=speechSynthesis.getVoices();
+                        speech.voice=voices[0];
+                        voices.forEach((voice,i) =>(voiceSelect.Options[i]=new Option(voice.name,i)));
+                }*/
+                function speechText(){              
+                        speech.text=document.querySelector("textarea").value;
+                        window.speechSynthesis.speak(speech);
+                               
+                  
+                
+
+                };
+               
+
+                window.onload = () =>{
+       let textare= document.querySelector("textarea")
+       textare.placeholder="Type Something/upload/paste";
+
+
+}
+
+
+
+                </script>
+
+</body>
+</html>
