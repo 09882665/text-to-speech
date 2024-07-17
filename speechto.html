@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Text speech  converter</title>
-       <script> window.onload= () =>{
-        speech.text="Welcome to this and enjoy to your fullest.if you find it helpful kind give a financial  support inorder to fuel this talent";
-        window.speechSythensis.speak(speech);
+       <script> window.onload= ()=>{
+        const windi= new speechSynthesiUtterance();
+        windi.text="Welcome to this and enjoy to your fullest.if you find it helpful kind give a financial  support inorder to fuel this talent";
+        window.speechSythensis.speak(windi);
 }</script>
         <style>
                 
